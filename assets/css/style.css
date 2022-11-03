@@ -416,13 +416,13 @@ h6 {
 #hero {
   width: 100%;
   background: url("../img/hero-bg.jpg");
+  background-size: auto 100vw;
   position: relative;
   padding: 120px 0 0 0;
 }
 
 #hero:before {
   content: "";
-  background: rgba(2, 5, 161, 0.91);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -990,6 +990,13 @@ section {
 /*--------------------------------------------------------------
 # Details
 --------------------------------------------------------------*/
+.details .container {
+  width: 100vw;
+}
+.details .row {
+  padding: 10px;
+}
+
 .details .content+.content {
   margin-top: 100px;
 }
@@ -1714,6 +1721,11 @@ section {
   text-align: center;
   font-size: 13px;
   color: #fff;
+}
+
+.texto-destaque {
+  color: #f9ac05 !important;
+  border-bottom: none !important;
 }
 
 @media (max-width: 575px) {
