@@ -2,8 +2,8 @@
 # General
 --------------------------------------------------------------*/
 body {
+  color: #fff;
   font-family: "Open Sans", sans-serif;
-  color: #444444;
 }
 
 a {
@@ -14,6 +14,14 @@ a {
 a:hover {
   color: #34e5a6;
   text-decoration: none;
+}
+
+h1 {
+  text-shadow: #000 .2rem .16rem;
+}
+
+h2, h3 {
+  text-shadow: #000 .16rem .2rem .1rem;
 }
 
 h1,
@@ -627,7 +635,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding-top: 60px;
   overflow: hidden;
 }
 
@@ -736,7 +744,13 @@ section {
 # About
 --------------------------------------------------------------*/
 .about {
+  color: black;
   padding: 40px 0 0 0;
+}
+
+.about h2, p {
+  font-weight: 600;
+  text-shadow: none !important;
 }
 
 .about .icon-boxes h3 {
@@ -904,11 +918,27 @@ section {
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
+.features {
+  position: relative;
+  padding-bottom: 20px;
+}
+.features::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(1, 3, 111, 0.8);
+}
+
 .features .icon-box {
-  display: flex;
   align-items: center;
-  padding: 20px;
   background: #f5f5ff;
+  border-radius: 5px;
+  color: #3b3eda;
+  display: flex;
+  padding: 20px;
   transition: ease-in-out 0.3s;
 }
 
@@ -919,11 +949,12 @@ section {
 }
 
 .features .icon-box h3 {
+  font-size: 16px;
   font-weight: 700;
+  line-height: 1;
   margin: 0;
   padding: 0;
-  line-height: 1;
-  font-size: 16px;
+  text-shadow: none !important;
 }
 
 .features .icon-box h3 a {
@@ -937,6 +968,15 @@ section {
 
 .features .icon-box:hover {
   background: #ebebff;
+}
+
+.features .section-title p {
+  color: #f9ac05 !important;
+}
+
+.features .btn-buy {
+  background-color: #f9ac05 !important;
+  color: #591783 !important;
 }
 
 /*--------------------------------------------------------------
@@ -990,9 +1030,19 @@ section {
 /*--------------------------------------------------------------
 # Details
 --------------------------------------------------------------*/
-.details .container {
-  width: 100vw;
+
+.details .container-bonus {
+  background: rgb(199,1,247);
+  background: radial-gradient(circle, rgba(199,1,247,1) 0%, rgba(103,25,139,1) 35%, rgba(68,19,120,1) 100%);
+  position: relative;
+  padding: 40px 10vw;
+  width: 100%;
 }
+
+.details .container .pb-5 {
+  color: black;
+}
+
 .details .row {
   padding: 10px;
 }
@@ -1004,7 +1054,6 @@ section {
 .details .content h3 {
   font-weight: 600;
   font-size: 26px;
-  color: #010483;
 }
 
 .details .content ul {
@@ -1048,7 +1097,6 @@ section {
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;
-  background: url("../img/cta-bg.jpg") no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -1237,28 +1285,30 @@ section {
 # Pricing
 --------------------------------------------------------------*/
 .pricing .box {
-  padding: 20px;
   background: #fff;
-  text-align: center;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.12);
   border-radius: 5px;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
 .pricing h3 {
-  font-weight: 400;
-  margin: -20px -20px 20px -20px;
-  padding: 20px 15px;
-  font-size: 16px;
-  font-weight: 600;
   color: #777777;
   background: #f8f8f8;
+  font-size: 16px;
+  font-weight: 600;
+  margin: -20px -20px 20px -20px;
+  padding: 20px 15px;
+}
+
+.pricing, h3, p, li {
+  text-shadow: none !important;
 }
 
 .pricing h4 {
   font-size: 36px;
-  color: #1acc8d;
+  color: #591783;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   margin-bottom: 20px;
@@ -1290,7 +1340,7 @@ section {
 }
 
 .pricing ul i {
-  color: #1acc8d;
+  color: #591783;
   font-size: 18px;
   padding-right: 4px;
 }
@@ -1303,12 +1353,17 @@ section {
 .pricing .btn-wrap {
   margin: 20px -20px -20px -20px;
   padding: 20px 15px;
-  background: #f8f8f8;
   text-align: center;
 }
 
+.pricing .btn-wrap a {
+  color: #f9ac05;
+  text-shadow: none;
+  font-weight: 700;
+}
+
 .pricing .btn-buy {
-  background: #1acc8d;
+  background: #591783;
   display: inline-block;
   padding: 8px 35px 10px 35px;
   border-radius: 50px;
@@ -1319,6 +1374,10 @@ section {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   transition: 0.3s;
+}
+
+.pricing ul {
+  padding-left: 15px;
 }
 
 .pricing .btn-buy:hover {
@@ -1339,8 +1398,12 @@ section {
   z-index: 1;
   font-size: 14px;
   padding: 1px 0 3px 0;
-  background: #1acc8d;
+  background: #591783;
   color: #fff;
+}
+
+.section-title p {
+  color: #000 !important;
 }
 
 /*--------------------------------------------------------------
@@ -1435,7 +1498,7 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #3f43fd;
+  color: #000;
   float: left;
   width: 44px;
   height: 44px;
@@ -1452,14 +1515,22 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #010483;
+  color: #000;
 }
 
 .contact .info p {
   padding: 0 0 0 60px;
   margin-bottom: 0;
   font-size: 14px;
-  color: #0205a1;
+  color: #000;
+}
+
+.contact .container {
+  padding-bottom: 20px;
+}
+
+.contact .section-title {
+  padding: 0;
 }
 
 .contact .info .email,
@@ -1574,13 +1645,49 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Garantia
+--------------------------------------------------------------*/
+.garantia {
+  color: aliceblue;
+}
+
+.garantia .codigo-consumidor {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2;
+}
+.garantia img {
+  max-width: 230px;
+}
+
+.garantia h3, h4 {
+  font-weight: 700 !important;
+}
+
+.garantia p {
+  font-size: 1.2rem;
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #010351;
-  padding: 0 0 30px 0;
-  color: #fff;
-  font-size: 14px;
+  width: 100%;
+  background: url("../img/hero-bg.jpg");
+  background-size: auto 100vw;
+  position: relative;
+  padding: 120px 0 0 0;
+}
+
+#footer:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 #footer .footer-top {
@@ -1721,6 +1828,11 @@ section {
   text-align: center;
   font-size: 13px;
   color: #fff;
+}
+
+.row a, li, p {
+  font-size: 1rem;
+  text-shadow: #000 .1rem .1rem;
 }
 
 .texto-destaque {
